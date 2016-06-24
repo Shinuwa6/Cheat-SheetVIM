@@ -5,8 +5,8 @@ h1 {color: white;
   max-width: 300px;
   margin: auto;
   margin-bottom: 50px;
-}
-
+}/*confique phrase d'entrée*/
+ 
 td {background-color;
 text-align: left;
 padding-left: 20px;
@@ -21,7 +21,7 @@ color :white;
 font-style: italic;
 font-weight: bolder;}
 tr {background-color:white ;
-}
+}/*CSS pour le tableau*/
 table{ margin: auto;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
      font-size: 10x;
@@ -32,7 +32,7 @@ table{ margin: auto;
      background-color: none;
   }
 
-
+/*Configuration*/
 p {font-family: cursive;
 text-align: center;
 color: white;
@@ -42,10 +42,10 @@ margin-bottom: 50px;}
 h3 {text-align: left;
 color: #CC9966;
 background-color:}
-
+/*arrière plan indispensable*/
 body { background: url(http://screenshots.en.sftcdn.net/en/scrn/69659000/69659412/tyrion-lannister-wallpaper-pack-01-700x525.png);
 font-family: monospace;}
-
+/*Configuration du texte*/
   h2 {font-size: cursive;
 background-size: cover;
 margin: 0;
@@ -63,3 +63,4 @@ margin-bottom: 50px;
 
 
 }
+/*passage en format telephone et Tablette*/
