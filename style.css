@@ -1,6 +1,6 @@
 h1 {color: white;
   font-family: fantasy;
-  background-color: #CC9966;
+  background-color:none;
   text-align: center;
   max-width: 300px;
   margin: auto;
@@ -8,14 +8,14 @@ h1 {color: white;
 }
 
 td {background-color;
-text-align: center;
+text-align: left;
 padding-left: 20px;
 font-family: sans-serif;
 color: black;
 font-weight: bolder;
 }
-th {background-color:#CC9966;
-text-align: right;
+th {background-color:#0033FF;
+text-align: center;
 font-family: cursive;
 color :white;
 font-style: italic;
@@ -43,13 +43,13 @@ h3 {text-align: left;
 color: #CC9966;
 background-color:}
 
-body { background: url(https://pbs.twimg.com/media/CkWgVmeWEAAfkDa.jpg);
+body { background: url(http://screenshots.en.sftcdn.net/en/scrn/69659000/69659412/tyrion-lannister-wallpaper-pack-01-700x525.png);
 font-family: monospace;}
 
   h2 {font-size: cursive;
 background-size: cover;
 margin: 0;
-background-color: #CC9966;
+background-color: none;
 text-align: center;
 color: white;
 
