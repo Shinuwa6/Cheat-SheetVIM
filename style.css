@@ -34,7 +34,7 @@ table{ margin: auto;
 
 
 p {font-family: cursive;
-text-align: left;
+text-align: center;
 color: white;
 background-color;
 margin-bottom: 50px;}
@@ -43,7 +43,7 @@ h3 {text-align: left;
 color: #CC9966;
 background-color:}
 
-body { background: url(http://www.corsaire-editions.com/pub/fond-ecran-chaton.jpg);
+body { background: url(https://pbs.twimg.com/media/CkWgVmeWEAAfkDa.jpg);
 font-family: monospace;}
 
   h2 {font-size: cursive;
@@ -52,7 +52,7 @@ margin: 0;
 background-color: #CC9966;
 text-align: center;
 color: white;
-max-width: 200px;
+
 margin-bottom: 50px;
 }
 
