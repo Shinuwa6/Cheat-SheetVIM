@@ -2,89 +2,226 @@
 <html>
   <head>
     <meta charset="utf-8">
-<link type "text/css" rel="stylesheet" href="style.css"/>
-    <title>CheatSheetTERM</title>
+<link rel="stylesheet" href="style.css" />
+    <title>CheatSheetVIM</title>
   </head>
   <body>
-<h1>Bienvenue sur ce CheatSheetTERM</h1>
-
-<h2>Commande Terminal</h2>
+<h1>Bienvenue sur ce CheatSheetVIM</h1>
+<h2>Introduction</h2>
+<h3>
+  Git et son fonctionnement:
+</h3>
+<p>
+  Git est utilisé pour versionner son code.
+</p>
+<h2>Commande de VIM</h2>
 <table>
-
+  <td style="text-align: left; color: #CC9900; font-weight: 800;">
+  How to Exit
+  </td>
 <tr>
-  <th>ls</th>
-<td>Lister le contenu d'un répertoire</td>
+  <th>:q[uit]</th>
+<td>Clone an existing repository</td>
 </tr>
 <tr style="margin-bottom: 100px;">
-<th> ls -all</th>
-<td>Lister le contenu d'un répertoire avec les fichiers cachés</td>
+<th> :q[uit]!</th>
+<td>Create a new local repository
 </tr>
 <tr>
-<th>ls -lh</th>
-<td>Lister le contenu d'un répertoire avec la taille en octet, ko, mo et go </td>
+  <th>:cq[uit]</th>
+  <td></td>
 </tr>
 <tr>
-<th>cd "nom du rep"</th>
-<td>Se déplacer dans les répertoires</td>
-<tr>
-<th>rm "nom_du_fichier"</th>
-<td>Supprimer un fichier</td>
+  <th>:wq</th>
+  <td></td>
 </tr>
 <tr>
-<th>mkdir "nom_du_rep"</th>
-<td>Créer un répertoire</td>
+  <th>:wq!</th>
+  <td></td>
 </tr>
 <tr>
-<th> rmdir "nom_du_repgit"</th>
-<td>Supprimer un repertoire</td>
+  <th>:wq {file}</th>
+  <td></td>
 </tr>
 <tr>
-  <th>
-    pwd
-  </th>
-  <td>
-    Connaître l'endroit où vous êtes
-  </td>
+  <th>:wq! {file}</th>
+  <td></td>
 </tr>
 <tr>
-  <th>
-    cp "doc_source doc_destination"
-  </th>
-  <td>
-    Copier un document
-  </td>
+  <th>:[range]wq[!]</th>
+  <td></td>
 </tr>
 <tr>
-  <th> cp -R "rep_source rep_destination"</th>
-  <td>Copier un répertoires</td>
+  <th>ZZ</th>
+  <td></td>
 </tr>
 <tr>
-  <th>mv "doc_source doc_destination"</th>
-  <td>Déplacer un document</td>
+  <th>ZQ</th>
+  <td></td>
+</tr>
+
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+Editing a File
+</td>
+<tr>
+<th>:e[dit]</th>
+<td>Changed files in your working directory</td>
 </tr>
 <tr>
-  <th>$ top</th>
-  <td>Liste des processus en cours</td>
+<th>:e[dit]!</th>
+<td>Changes to tracked files</td>
+<tr>
+<th>:e[dit] {file}</th>
+<td>Add all current changes in "files" to the next commit</td>
 </tr>
 <tr>
-  <th>$ who</th>
-  <td>Pour savoir qui est connecté</td>
+<th>:e[dit]! {file}</th>
+<td>Add some changes in "files" to the next commit</td>
 </tr>
 <tr>
-  <th>$ w</th>
-  <td>Pour avoir plus de détails concernant les utilisateurs</td>
+<th>ggf</th>
+<td>Commit all local changes in tracked files</td>
+</tr>
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Inserting Text
+</td>
+<tr>
+  <th>a</th>
+  <td>List all existing branches</td>
 </tr>
 <tr>
-  <th>$ users</th>
-  <td>Pour savoir qui est connecté en local</td>
+  <th>A</th>
+  <td>Switch head branch</td>
 </tr>
 <tr>
-  <th>$ write "nom_d'utilisateur"</th>
-  <td>Pour écrire à un utilisateur</td>
+  <th>i</th>
+  <td>Create a new branch based on your current HEAD</td>
 </tr>
 <tr>
-  <th>$ uptime</th>
-  <td>Pour savoir depuis combien de temps l'ordinateur (ou le serveur) est booté.</td>
+  <th>I</th>
+  <td>Create a new tracking branch based on a remote branch</td>
+</tr>
+<tr>
+  <th>gI</th>
+  <td>Delete a local branch</td>
+</tr>
+<tr>
+  <th>o</th>
+  <td>Mark the current commit with a tag</td>
+</tr>
+<tr>
+  <th>O</th>
+<td></td>
+</tr>
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Insterting a file
+</td>
+<tr>
+  <th>:r[ead] [name]</th>
+  <td>Show all commits, staring with newest</td>
+</tr>
+<tr>
+  <th>:r[ead] !{cmd}</th>
+  <td>Show changes over time for a specific file</td>
+</tr>
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Deleting Text
+</td>
+<tr>
+  <th>"Del"or or</th>
+  <td>Merge "branch" into your current HEAD</td>
+</tr><tr>
+  <th>x</th>
+  <td>Rebase your current HEAD onto "branch"</td>
+</tr><tr>
+  <th>X</th>
+  <td>Abort a rebase</td>
+</tr><tr>
+  <th>gd{motion}</th>
+  <td>Continue a rebase after resolving conflicts</td>
+</tr><tr>
+  <th>dd</th>
+  <td>Use your configured merge tool to solve conflicts</td>
+</tr><tr>
+  <th>D</th>
+  <td>Use your editor to manually solve conflicts and mark file as resolved</td>
+</tr>
+<tr>
+  <th>{Visual}x or
+{Visual}d</th>
+  <td></td>
+</tr>
+<tr>
+  <th>{Visual}CTRL-H or
+{Visual}</th>
+  <td></td>
+</tr>
+<tr>
+  <th>{Visual}X or
+{Visual}D</th>
+  <td></td>
+</tr>
+<tr>
+  <th>:[range]d[elete]</th>
+  <td></td>
+</tr>
+<tr>
+  <th>:[range]d[elete] {count}</th>
+  <td></td>
+</tr>
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Changing (or Replacing) Text
+</td>
+<tr>
+  <th>r{char}</th>
+  <td></td>
+</tr>
+<tr>
+  <th>R</th>
+  <td></td>
+</tr>
+<tr>
+  <th>~</th>
+  <td></td>
+</tr>
+<tr>
+  <th>~{motion}</th>
+  <td></td>
+</tr>
+<tr>
+  <th>{Visual}~</th>
+  <td></td>
+</tr>
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Deleting Text
+</td>
+<tr>
+  <th></th>
+  <td></td>
+</tr>
+
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Deleting Text
+</td>
+<tr>
+  <th></th>
+  <td></td>
+</tr>
+
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Deleting Text
+</td>
+<tr>
+  <th></th>
+  <td></td>
+</tr>
+
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Deleting Text
+</td>
+<tr>
+  <th></th>
+  <td></td>
 </tr>
 </table>
   </body>
