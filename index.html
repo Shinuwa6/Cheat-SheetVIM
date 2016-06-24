@@ -21,43 +21,43 @@
   </td>
 <tr>
   <th>:q[uit]</th>
-<td>Clone an existing repository</td>
+<td>Quit Vim. This fails when changes have been made.</td>
 </tr>
 <tr style="margin-bottom: 100px;">
 <th> :q[uit]!</th>
-<td>Create a new local repository
+<td> 	Quit without writing.
 </tr>
 <tr>
   <th>:cq[uit]</th>
-  <td></td>
+  <td>Quit always, without writing.</td>
 </tr>
 <tr>
   <th>:wq</th>
-  <td></td>
+  <td> 	Write the current file and exit.</td>
 </tr>
 <tr>
   <th>:wq!</th>
-  <td></td>
+  <td> 	Write the current file and exit always.</td>
 </tr>
 <tr>
   <th>:wq {file}</th>
-  <td></td>
+  <td>Write to {file}. Exit if not editing the last</td>
 </tr>
 <tr>
   <th>:wq! {file}</th>
-  <td></td>
+  <td>Write to {file} and exit always.</td>
 </tr>
 <tr>
   <th>:[range]wq[!]</th>
-  <td></td>
+  <td> 	[file] Same as above, but only write the lines in [range].</td>
 </tr>
 <tr>
   <th>ZZ</th>
-  <td></td>
+  <td> 	Write current file, if modified, and exit.</td>
 </tr>
 <tr>
   <th>ZQ</th>
-  <td></td>
+  <td> 	Quit current file and exit (same as ":q!").</td>
 </tr>
 
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
@@ -65,163 +65,321 @@ Editing a File
 </td>
 <tr>
 <th>:e[dit]</th>
-<td>Changed files in your working directory</td>
+<td>Edit the current file. This is useful to re-edit the current file, when it has been changed outside of Vim.</td>
 </tr>
 <tr>
 <th>:e[dit]!</th>
-<td>Changes to tracked files</td>
+<td>Edit the current file always. Discard any changes to the current buffer. This is useful if you want to start all over again.</td>
 <tr>
 <th>:e[dit] {file}</th>
-<td>Add all current changes in "files" to the next commit</td>
+<td>Edit {file}. </td>
 </tr>
 <tr>
 <th>:e[dit]! {file}</th>
-<td>Add some changes in "files" to the next commit</td>
+<td>Edit {file} always. Discard any changes to the current buffer.</td>
 </tr>
 <tr>
-<th>ggf</th>
-<td>Commit all local changes in tracked files</td>
+<th>gf</th>
+<td>Edit the file whose name is under or after the cursor. Mnemonic: "goto file".</td>
 </tr>
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
   Inserting Text
 </td>
 <tr>
   <th>a</th>
-  <td>List all existing branches</td>
+  <td> 	Append text after the cursor [count] times.</td>
 </tr>
 <tr>
   <th>A</th>
-  <td>Switch head branch</td>
+  <td> 	Append text at the end of the line [count] times.</td>
 </tr>
 <tr>
   <th>i</th>
-  <td>Create a new branch based on your current HEAD</td>
+  <td> 	Insert text before the cursor [count] times.</td>
 </tr>
 <tr>
   <th>I</th>
-  <td>Create a new tracking branch based on a remote branch</td>
+  <td>Insert text before the first non-blank in the line [count] times.</td>
 </tr>
 <tr>
   <th>gI</th>
-  <td>Delete a local branch</td>
+  <td>Insert text in column 1 [count] times.</td>
 </tr>
 <tr>
   <th>o</th>
-  <td>Mark the current commit with a tag</td>
+  <td>Begin a new line below the cursor and insert text, repeat [count] times.</td>
 </tr>
 <tr>
   <th>O</th>
-<td></td>
+<td>Begin a new line above the cursor and insert text, repeat [count] times.</td>
 </tr>
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
   Insterting a file
 </td>
 <tr>
   <th>:r[ead] [name]</th>
-  <td>Show all commits, staring with newest</td>
+  <td> 	Insert the file [name] below the cursor.</td>
 </tr>
 <tr>
   <th>:r[ead] !{cmd}</th>
-  <td>Show changes over time for a specific file</td>
+  <td> 	Execute {cmd} and insert its standard output below the cursor. </td>
 </tr>
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
   Deleting Text
 </td>
 <tr>
   <th>"Del"or or</th>
-  <td>Merge "branch" into your current HEAD</td>
+  <td>Delete [count] characters under and after the cursor</td>
 </tr><tr>
   <th>x</th>
-  <td>Rebase your current HEAD onto "branch"</td>
+  <td> 	Delete [count] characters before the cursor</td>
 </tr><tr>
-  <th>X</th>
-  <td>Abort a rebase</td>
-</tr><tr>
-  <th>gd{motion}</th>
-  <td>Continue a rebase after resolving conflicts</td>
+  <th>d{motion}</th>
+  <td> 	Delete text that {motion} moves over </td>
 </tr><tr>
   <th>dd</th>
-  <td>Use your configured merge tool to solve conflicts</td>
+  <td> 	Delete [count] lines</td>
 </tr><tr>
   <th>D</th>
-  <td>Use your editor to manually solve conflicts and mark file as resolved</td>
+  <td>Delete the characters under the cursor until the end of the line</td>
 </tr>
 <tr>
   <th>{Visual}x or
 {Visual}d</th>
-  <td></td>
+  <td>Delete the highlighted text (for {Visual} see Selecting Text).</td>
 </tr>
 <tr>
   <th>{Visual}CTRL-H or
 {Visual}</th>
-  <td></td>
+  <td>When in Select mode: Delete the highlighted text</td>
 </tr>
 <tr>
   <th>{Visual}X or
 {Visual}D</th>
-  <td></td>
+  <td>Delete the highlighted lines </td>
 </tr>
 <tr>
   <th>:[range]d[elete]</th>
-  <td></td>
+  <td> 	Delete [range] lines (default: current line)</td>
 </tr>
 <tr>
   <th>:[range]d[elete] {count}</th>
-  <td></td>
+  <td>Delete {count} lines, starting with [range]</td>
 </tr>
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
   Changing (or Replacing) Text
 </td>
 <tr>
   <th>r{char}</th>
-  <td></td>
+  <td>replace the character under the cursor with {char}./td>
 </tr>
 <tr>
   <th>R</th>
-  <td></td>
+  <td> 	Enter Insert mode, replacing characters rather than inserting</td>
 </tr>
 <tr>
   <th>~</th>
-  <td></td>
+  <td> 	Switch case of the character under the cursor and move the cursor to the right. If a [count] is given, do that many characters.</td>
 </tr>
 <tr>
   <th>~{motion}</th>
-  <td></td>
+  <td> 	switch case of {motion} text.</td>
 </tr>
 <tr>
   <th>{Visual}~</th>
-  <td></td>
+  <td>Switch case of highlighted text</td>
 </tr>
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
-  Deleting Text
+  Copying and Moving Text
 </td>
 <tr>
-  <th></th>
-  <td></td>
+  <th>"{a-zA-Z0-9.%#:-"}</th>
+  <td>Use register {a-zA-Z0-9.%#:-"} for next delete, yank or put (use uppercase character to append with delete and yank) ({.%#:} only work with put).</td>
+</tr>
+<tr>
+  <th>:reg[isters]</th>
+  <td>Display the contents of all numbered and named registers.</td>
+</tr>
+<tr>
+  <th>:reg[isters] {arg}</th>
+  <td>Display the contents of the numbered and named registers that are mentioned in {arg}. </td>
+</tr>
+<tr>
+  <th>:di[splay] [arg]</th>
+  <td>Same as :registers. </td>
+</tr>
+<tr>
+  <th>["x]y{motion}</th>
+  <td>Yank {motion} text [into register x].</td>
+</tr>
+<tr>
+  <th>["x]yy</th>
+  <td>Yank [count] lines [into register x]</td>
+</tr>
+<tr>
+  <th>["x]Y</th>
+  <td> 	yank [count] lines [into register x] (synonym for yy).</td>
+</tr>
+<tr>
+  <th>{Visual}["x]y</th>
+  <td>Yank the highlighted text [into register x] (for {Visual} see Selecting Text).</td>
+</tr>
+<tr>
+  <th>{Visual}["x]Y</th>
+  <td> 	Yank the highlighted lines [into register x]</td>
+</tr>
+<tr>
+  <th>:[range]y[ank] [x]</th>
+  <td> 	Yank [range] lines [into register x].</td>
+</tr>
+<tr>
+  <th>:[range]y[ank] [x] {count}</th>
+  <td>Yank {count} lines, starting with last line number in [range] (default: current line), [into register x].</td>
+</tr>
+<tr>
+  <th>["x]p</th>
+  <td> 	Put the text [from register x] after the cursor [count] times.</td>
+</tr>
+<tr>
+  <th>["x]P</th>
+  <td> 	Put the text [from register x] before the cursor [count] times.</td>
+</tr>
+<tr>
+  <th>["x]gp</th>
+  <td> 	Just like "p", but leave the cursor just after the new text.</td>
+</tr>
+<tr>
+  <th>["x]gP</th>
+  <td> 	Just like "P", but leave the cursor just after the new text.</td>
+</tr>
+<tr>
+  <th>:[line]pu[t] [x]</th>
+  <td>Put the text [from register x] after [line] (default current line).</td>
+</tr>
+<tr>
+  <th>:[line]pu[t]! [x]</th>
+  <td>Put the text [from register x] before [line] (default current line).</td>
+</tr>
+
+
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Undo/Redo/Repeat
+</td>
+<tr>
+  <th>u</th>
+  <td>Undo [count] changes. </td>
+</tr>
+<tr>
+  <th>:u[ndo]</th>
+  <td> 	Undo one change. </td>
+</tr>
+
+<tr>
+  <th>CTRL-R</th>
+  <td> 	Redo [count] changes which were undone. </td>
+</tr>
+<tr>
+  <th>:red[o]</th>
+  <td> 	Redo one change which was undone. </td>
+</tr>
+
+<tr>
+  <th>U</th>
+  <td>Undo all latest changes on one line. {Vi: while not moved off of it}</td>
+</tr>
+
+<tr>
+  <th>.</th>
+  <td>Repeat last change, with count replaced with [count].</td>
+</tr>
+
+
+<td style="text-align: left; color: #CC9900; font-weight: 800;">
+  Marks
+</td>
+<tr>
+  <th>m{a-zA-Z}</th>
+  <td>Set mark {a-zA-Z} at cursor position (does not move the cursor, this is not a motion command)</td>
+</tr>
+<tr>
+  <th>m' or m`</th>
+  <td>Set the previous context mark. This can be jumped to with the "''" or "``" command (does not move the cursor, this is not a motion command).</td>
+</tr>
+<tr>
+  <th>:[range]ma[rk] {a-zA-Z}</th>
+  <td>Set mark {a-zA-Z} at last line number in [range], column 0. Default is cursor line.</td>
+</tr>
+<tr>
+  <th>:[range]k{a-zA-Z}</th>
+  <td>Same as :mark, but the space before the mark name can be omitted.</td>
+</tr>
+<tr>
+  <th>'{a-z}</th>
+  <td>To the first non-blank character on the line with mark {a-z} (linewise).</td>
+</tr>
+<tr>
+  <th>'{A-Z0-9}</th>
+  <td> 	To the first non-blank character on the line with mark {A-Z0-9} in the correct file</td>
+</tr>
+<tr>
+  <th>`{a-z}</th>
+  <td> 	To the mark {a-z}</td>
+</tr>
+<tr>
+  <th>`{A-Z0-9}</th>
+  <td>To the mark {A-Z0-9} in the correct file</td>
+</tr>
+<tr>
+  <th>:marks</th>
+  <td> 	List all the current marks (not a motion command).</td>
+</tr>
+<tr>
+  <th>:marks {arg}</th>
+  <td>List the marks that are mentioned in {arg} (not a motion command). For example:</td>
 </tr>
 
 <td style="text-align: left; color: #CC9900; font-weight: 800;">
-  Deleting Text
+  Searching
 </td>
 <tr>
-  <th></th>
-  <td></td>
+  <th>/{pattern}[/]</th>
+  <td> 	Search forward for the [count]'th occurrence of {pattern}</td>
 </tr>
-
-<td style="text-align: left; color: #CC9900; font-weight: 800;">
-  Deleting Text
-</td>
 <tr>
-  <th></th>
-  <td></td>
+  <th>/{pattern}/{offset}</th>
+  <td>Search forward for the [count]'th occurrence of {pattern} and go {offset} lines up or down.</td>
 </tr>
-
-<td style="text-align: left; color: #CC9900; font-weight: 800;">
-  Deleting Text
-</td>
 <tr>
-  <th></th>
-  <td></td>
+  <th>/"CR"</th>
+  <td> 	Search forward for the [count]'th latest used pattern</td>
+</tr>
+<tr>
+  <th>//{offset}""CR""</th>
+  <td> 	Search forward for the [count]'th latest used pattern with new. If {offset} is empty no offset is used.</td>
+</tr>
+<tr>
+  <th>?{pattern}[?]'CR'</th>
+  <td>Search backward for the [count]'th previous occurrence of {pattern} </td>
+</tr>
+<tr>
+  <th>?{pattern}?{offset}"CR"</th>
+  <td> 	Search backward for the [count]'th previous occurrence of {pattern} and go {offset} lines up or down </td>
+</tr>
+<tr>
+  <th>?"CR"</th>
+  <td> 	Search backward for the [count]'th latest used pattern </td>
+</tr>
+<tr>
+  <th>??{offset}"CR"</th>
+  <td> 	Search backward for the [count]'th latest used pattern with new {offset}. If {offset} is empty no offset is used.</td>
+</tr>
+<tr>
+  <th>n</th>
+  <td> 	Repeat the latest "/" or "?" [count] times.</td>
+</tr>
+<tr>
+  <th>N</th>
+  <td>Repeat the latest "/" or "?" [count] times in opposite direction. </td>
 </tr>
 </table>
   </body>
